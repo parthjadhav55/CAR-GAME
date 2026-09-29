@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highway Rush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game-wrapper">
+
+    <header>
+        <div>
+            <h1>🏎️ Highway Rush</h1>
+            <p>Drive fast. Dodge traffic. Beat your high score.</p>
+        </div>
+
+        <button id="pauseBtn">⏸ Pause</button>
+    </header>
+
+    <div class="hud">
+
+        <div class="hud-box">
+            <span>🏆 SCORE</span>
+            <strong id="score">0</strong>
+        </div>
+
+        <div class="hud-box">
+            <span>🥇 BEST</span>
+            <strong id="highScore">0</strong>
+        </div>
+
+        <div class="hud-box">
+            <span>❤️ LIVES</span>
+            <strong id="lives">3</strong>
+        </div>
+
+        <div class="hud-box">
+            <span>⚡ SPEED</span>
+            <strong id="speed">1</strong>
+        </div>
+
+    </div>
+
+    <div class="game-container">
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="startScreen" class="overlay">
+
+            <div class="menu">
+
+                <div class="car-icon">🏎️</div>
+
+                <h2>HIGHWAY RUSH</h2>
+
+                <p>
+                    Dodge traffic and collect coins.
+                    <br>
+                    How far can you drive?
+                </p>
+
+                <button id="startBtn" class="main-btn">
+                    🚀 START RACE
+                </button>
+
+                <div class="controls">
+                    <span>⬅️ A / LEFT</span>
+                    <span>➡️ D / RIGHT</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="gameOver" class="overlay hidden">
+
+            <div class="menu">
+
+                <div class="car-icon">💥</div>
+
+                <h2>RACE OVER</h2>
+
+                <p>Your score</p>
+
+                <strong id="finalScore">0</strong>
+
+                <p id="newRecord" class="record">
+                    🏆 NEW HIGH SCORE!
+                </p>
+
+                <button id="restartBtn" class="main-btn">
+                    🔄 PLAY AGAIN
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="pauseScreen" class="overlay hidden">
+
+            <div class="menu">
+
+                <div class="car-icon">⏸️</div>
+
+                <h2>PAUSED</h2>
+
+                <button id="resumeBtn" class="main-btn">
+                    ▶ RESUME
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MOBILE CONTROLS -->
+
+    <div class="mobile-controls">
+
+        <button id="leftBtn">⬅️</button>
+
+        <button id="rightBtn">➡️</button>
+
+    </div>
+
+    <footer>
+        <span>Highway Rush</span>
+        <span>Made with HTML • CSS • JavaScript</span>
+    </footer>
+
+</div>
+
+<script src="game.js"></script>
+
+</body>
+</html>
